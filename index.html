@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./assets/css/normalize.min.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,9 +24,9 @@
     <div class="app">
       <!-- Begin:Header -->
       <header class="header">
-        <div class="grid">
+        <div class="grid wide">
           <!-- Navbar  -->
-          <nav class="navbar__header">
+          <nav class="navbar__header hide-on-mobile-tablet">
             <div class="navbar__left">
               <ul class="navbar__list">
                 <li class="navbar__item navbar__item--saparate navbar__item--has-qr-code">
@@ -136,7 +138,11 @@
 
           <!-- Header with search -->
           <div class="header-with-search">
-            <div class="header__logo">
+            <label for="header-mobile-search" class="header__mobile-search">
+              <i class="header__mobile-search-icon fas fa-search"></i>
+            </label>
+
+            <div class="header__logo hide-on-tablet">
               <a href="/" class="header__logo-link">
                 <svg viewBox="0 0 192 65" class="header__logo-img">
                   <g fill-rule="evenodd">
@@ -145,6 +151,8 @@
                 </svg>
               </a>
             </div>
+
+            <input type="checkbox" hidden id="header-mobile-search" class="header__mobile-search-checkbox">
 
             <div class="header__search">
               <div class="header__search-input-wrap">
@@ -249,12 +257,27 @@
             </div>
           </div>
         </div>
+
+        <ul class="header__sort-bars">
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Liên quan</a>
+          </li>
+          <li class="header__sort-item header__sort-item--active">
+            <a href="" class="header__sort-link">Mới nhất</a>
+          </li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Bán chạy</a>
+          </li>
+          <li class="header__sort-item">
+            <a href="" class="header__sort-link">Giá</a>
+          </li>
+        </ul>
       </header>
       <!-- Begin:Header -->
 
       <!-- Begin: App Container -->
       <div class="app__container">
-        <div class="grid">
+        <div class="grid wide">
           <div class="grid__row app__content">
             <div class="grid__col-2">
               <nav class="category">
@@ -282,7 +305,7 @@
               </nav>
             </div>
             <div class="grid__col-10">
-              <div class="home-filter">
+              <div class="home-filter hide-on-mobile-tablet ">
                 <span class="home-filter__label">Sắp xếp theo</span>
                 <button class="home-filter__btn btn">Phổ biến</button>
                 <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -756,7 +779,7 @@
 
       <!-- Begin: Footer -->
       <footer class="footer">
-        <div class="grid">
+        <div class="grid wide">
           <div class="grid__row">
             <div class="grid__col-2-4">
               <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -847,7 +870,7 @@
         </div>
 
         <div class="footer__copyright">
-          <div class="grid">
+          <div class="grid wide">
             <p class="footer__copyright-title">&copy; 2024 - Bản quyền thuộc về PhuocNguyen</p>
           </div>
         </div>
