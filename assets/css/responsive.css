@@ -155,6 +155,20 @@
     height: 24px;
   }
 
+  .home-product__item-favourite {
+    display: flex;
+    align-items: center;
+  }
+
+  .home-product__item-favourite i {
+    margin-right: 4px;
+  }
+
+  .home-product__item-sale-off {
+    display: flex;
+    flex-direction: column;
+  }
+
   @keyframes showHeaderMobileSearch {
     from {
       top: calc(var(--height-header) / 2);
